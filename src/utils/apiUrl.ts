@@ -15,11 +15,11 @@ export const getApiUrl = (route: string) => {
     ]
     const isKoisnikRoute = koisnikRoutes.some(prefix => route.startsWith(prefix));
     if (isKoisnikRoute) {
-        return 'http://localhost:8080/api'
+        return 'https://banka-4-dev.si.raf.edu.rs/user-service/api'
     }
     const isBankaRoute = bankaRoutes.some(prefix => route.startsWith(prefix));
     if (isBankaRoute) {
-        return 'http://localhost:8082/api'
+        return 'https://banka-4-dev.si.raf.edu.rs/banka-service/api'
     }
-    return 'http://localhost:8081/api'
+    return 'https://banka-4-dev.si.raf.edu.rs/berza-service/api'
 }
